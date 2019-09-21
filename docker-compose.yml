@@ -1,0 +1,29 @@
+version: '3.6'
+
+services:
+  mongo:
+    container_name: amkt_mongo
+    image: mongo:4.2.0
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27018:27017"
+    networks:
+      - amkt_network
+  amkt:
+    container_name: amkt_service
+    tty: true
+    build: .
+    command: bash -c "npm install && npm run dev"
+    working_dir: /workspace
+    volumes:
+      - ".:/workspace"
+    environment:
+      NODE_ENV: development
+    ports:
+      - "7003:7003"
+    networks:
+      - amkt_network
+
+networks:
+  amkt_network:

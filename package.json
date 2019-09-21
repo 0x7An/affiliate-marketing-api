@@ -1,0 +1,50 @@
+{
+  "name": "a-mkt",
+  "version": "0.0.1",
+  "description": "Affiliate Marketing API",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=11.8.0"
+  },
+  "scripts": {
+    "start": "node -r esm index.js",
+    "dev": "nodemon -r esm index.js",
+    "clean": "rm -rf node_modules"
+  },
+  "author": "Anderson <andersondsl@gmail.com>",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "bristol": "^0.4.0",
+    "dotenv": "^8.1.0",
+    "esm": "^3.2.25",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-respond": "^2.1.0",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.6.5",
+    "mongoose": "^5.6.11",
+    "morgan": "^1.9.1",
+    "palin": "^2.3.0",
+    "sequelize": "^5.16.0",
+    "sequelize-cli": "^5.5.0",
+    "swagger-ui-express": "^4.0.7",
+    "yenv": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
+    "factory-girl": "^5.0.4",
+    "chance": "^1.0.6",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.15.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  }
+}
