@@ -9,28 +9,35 @@
 ## Prerequisites
 
 - node >=11.8.0
-
-## Install
-
-```sh
-npm install
-```
+- docker 
+- docker-compose
 
 ## Usage
 
 ```sh
 docker-compose up
 ```
+This will up mongo db and the application
+
+# Routes
+
+## urls
+GET   /urls - retrive all urls that has been shortned\
+POST  /url/shorten - short any url as a post verb, need to pass a user_id\
+GET   /url/expand/:url - expand any shortned url\
+
+## clicks
+GET  /url/:url - contabilize clicks\
+
+## products
+GET /products - retrieve all products\
+GET /product/:id' - get a product by id\
+PUT /product/:id\
+POST /product\
+DELETE /product\
 
 ## Author
 
-👤 **Anderson <andersondsl@gmail.com>**
+👤 **Anderson <andersons.code@gmail.com>**
 
 * Github: [@andersondsl](https://github.com/andersondsl)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
