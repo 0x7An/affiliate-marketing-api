@@ -2,7 +2,7 @@
 
 import Router from 'koa-router';
 import { index, create, find, update, destroy } from './controllers/productsController';
-import { shorten, expand } from './controllers/urlsController';
+import { shorten, expand, click } from './controllers/urlsController';
 
 const router = new Router();
 
@@ -13,6 +13,9 @@ router.get('/', (ctx, next) => {
 // URLS
 router.post('/url/shorten', shorten);
 router.get('/url/expand/:url', expand);
+
+// CLICKS
+router.get('/url/:url', click);
 
 // PRODUCTS
 router.get('/products', index);

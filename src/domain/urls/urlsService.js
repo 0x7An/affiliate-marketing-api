@@ -29,6 +29,14 @@ class UrlsService extends Service {
     result.status = result.data ? 200 : 500
     return result
   }
+
+  async click(url) {
+    let result = {}
+    result.data = await this.urlsRepository.getByUrl(url)
+    result.status = result.data ? 200 : 500
+    return result
+  }
+
 }
 
 export const urlsService = new UrlsService();

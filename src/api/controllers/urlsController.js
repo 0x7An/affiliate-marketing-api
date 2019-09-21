@@ -18,6 +18,9 @@ export const expand = async (ctx, next) => {
 }
 
 export const click = async (ctx, next) => {
-    const { id } = ctx.params;
-    await handleResponse(ctx, urlsService.countClick(id))
+    const { url } = ctx.params
+    console.log('ANDERSON', ctx)
+    let { data } = await urlsService.click(url);
+    ctx.status = 307
+    ctx.redirect(data.original_url)
 }
