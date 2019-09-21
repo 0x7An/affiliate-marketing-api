@@ -8,10 +8,16 @@ const handleResponse = async (ctx, callback) => {
 }
 
 export const shorten = async (ctx, next) => {
-    await handleResponse(ctx, urlsService.shortURL())
+    let { url, user_id } = ctx.request.body
+    await handleResponse(ctx, urlsService.shortUrl(url, user_id))
 }
 
 export const expand = async (ctx, next) => {
+    const { url } = ctx.params;
+    await handleResponse(ctx, urlsService.expandUrl(url))
+}
+
+export const click = async (ctx, next) => {
     const { id } = ctx.params;
-    await handleResponse(ctx, urlsService.expandUrl(id))
+    await handleResponse(ctx, urlsService.countClick(id))
 }

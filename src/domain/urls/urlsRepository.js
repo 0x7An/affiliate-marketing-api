@@ -14,8 +14,8 @@ const handleMongoQuery = async (queryCallback) => {
 
 export const urlsRepository = {
     getAll : async () => handleMongoQuery(URL.find({})),
-    getById : async (id) => handleMongoQuery(URL.findById(id)),
-    create: async (userData) => handleMongoQuery(URL.create(userData)),
+    getByUrl : async (url) => handleMongoQuery(URL.findOne({ "shortned_url": url })),
+    create: async (data) => handleMongoQuery(URL.create(data)),
     update: async ({ id, fieldsToUpdate }) => handleMongoQuery(URL.update( { _id: id }, { $set : fieldsToUpdate })),
     destroy: async (id) => handleMongoQuery(URL.findByIdAndRemove(id))
 };

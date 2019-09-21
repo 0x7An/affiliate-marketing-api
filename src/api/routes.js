@@ -11,8 +11,8 @@ router.get('/', (ctx, next) => {
 });
 
 // URLS
-router.get('/url/shorten', shorten);
-router.get('/url/expand', expand);
+router.post('/url/shorten', shorten);
+router.get('/url/expand/:url', expand);
 
 // PRODUCTS
 router.get('/products', index);
