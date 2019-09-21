@@ -7,6 +7,10 @@ const handleResponse = async (ctx, callback) => {
     ctx.body = data ? data : { "error" : "Internal server error"}
 }
 
+export const allUrls = async (ctx, next) => {
+    await handleResponse(ctx, urlsService.getAll())
+}
+
 export const shorten = async (ctx, next) => {
     let { url, user_id } = ctx.request.body
     await handleResponse(ctx, urlsService.shortUrl(url, user_id))
@@ -19,8 +23,9 @@ export const expand = async (ctx, next) => {
 
 export const click = async (ctx, next) => {
     const { url } = ctx.params
-    console.log('ANDERSON', ctx)
-    let { data } = await urlsService.click(url);
+    const { host, origin, query, ip } = ctx.request
+
+    let { data } = await urlsService.click(url, { host, origin, query, ip });
     ctx.status = 307
     ctx.redirect(data.original_url)
 }
