@@ -26,4 +26,11 @@ router.put('/product/:id', update);
 router.post('/product', create);
 router.delete('/product', destroy);
 
+// CAMPAINGS 
+router.get('/campaigns', index);
+router.get('/campaign/:id', find);
+router.put('/campaign/:id', update);
+router.post('/campaign', create);
+router.delete('/campaign', destroy);
+
 export default router

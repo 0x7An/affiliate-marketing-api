@@ -4,6 +4,7 @@ import { env } from '../env'
 import { ProductsModel } from './models/product'
 import { UrlsModel } from './models/urls'
 import { ClicksModel } from './models/clicks'
+import { CampaignModel } from './models/campaign'
 
 mongoose.connect(env.MONGO_URI, { useNewUrlParser: true }).then(() => {
   logger.info(`Successful connected to mongo on ${env.MONGO_URI}`, { scope: 'startup' })
