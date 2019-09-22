@@ -41,10 +41,9 @@ class UrlsService extends Service {
 
   async click(url, metadata) {
     let result = {}
-    metadata.clickTime = new Date().toISOString()
-
-    console.log(metadata)
-    //console.log(geoip.lookup(metadata))
+    
+    metadata.clickTime = new Date().toISOString()    
+    metadata.location = this.getLocationMetadata(metadata.ip)
 
     result.data = await this.urlsRepository.getByUrl(url)
     await this.clicksRepository.create({ url, metadata })
@@ -59,6 +58,13 @@ class UrlsService extends Service {
       this.generateShortUrl()
     }
     return shortUrl
+  }
+
+  getLocationMetadata(ip){
+    let onlyNumberAndDots = /[\d.]+$/
+    let ipMetadata = geoip.lookup(ip.match(onlyNumberAndDots)[0])
+    console.log(ipMetadata)
+    return ipMetadata
   }
 
 }

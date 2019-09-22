@@ -17,6 +17,7 @@ router.get('/url/expand/:url', expand);
 
 // CLICKS
 router.get('/url/:url', click);
+router.get('/clicks', click);
 
 // PRODUCTS
 router.get('/products', index);
