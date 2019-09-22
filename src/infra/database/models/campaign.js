@@ -9,26 +9,19 @@ const CampaignSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  shop_id: {
-    type: String,
-    required: true,
-    lowercase: true,
-  },
+  shop_id: { type: mongoose.Schema.ObjectId, ref: 'Shop' },
   active: {
-    type: String,
+    type: Boolean,
     required: true,
   },
   init_date: {
-    type: String,
+    type: Date,
     required: true,
   },
   finish_date: {
-    type: String
+    type: Date
   },
-  products: {
-    type: String,
-    required: true,
-  },
+  products: [{ type: mongoose.Schema.ObjectId, ref: 'Products' }],
   createdAt: {
     type: Date,
     default: Date.now,
