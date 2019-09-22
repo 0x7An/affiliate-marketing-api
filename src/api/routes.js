@@ -1,7 +1,7 @@
 'use strict'
 
 import Router from 'koa-router';
-import { index, create, find, update, destroy } from './controllers/productsController';
+import { allProducts, createProduct, findProduct, updateProduct, destroyProduct } from './controllers/productsController';
 import { allUrls, shorten, expand, click } from './controllers/urlsController';
 import { AllCampaings, createCampaing, findCampaing, updateCampaing, destroyCampaing } from './controllers/campaignController';
 import { AllShops, createShop, findShop, updateShop, destroyShop } from './controllers/shopsController';
@@ -22,11 +22,11 @@ router.get('/url/:url', click);
 router.get('/clicks', click);
 
 // PRODUCTS
-router.get('/products', index);
-router.get('/product/:id', find);
-router.put('/product/:id', update);
-router.post('/product', create);
-router.delete('/product', destroy);
+router.get('/products', allProducts);
+router.get('/product/:id', findProduct);
+router.put('/product/:id', updateProduct);
+router.post('/product', createProduct);
+router.delete('/product', destroyProduct);
 
 // CAMPAINGS 
 router.get('/campaigns', AllCampaings);
