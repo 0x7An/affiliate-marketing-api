@@ -52,4 +52,4 @@ const _getFieldsToUpdate = (fields) => {
   }
 }
 
-export const ShopsService = new ShopService();
+export const shopService = new ShopService();

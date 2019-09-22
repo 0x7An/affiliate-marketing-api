@@ -12,7 +12,7 @@ const handleMongoQuery = async (queryCallback) => {
   }
 }
 
-export const ShopsRepository = {
+export const shopRepository = {
     getAll : async () => handleMongoQuery(Shop.find({})),
     getById : async (id) => handleMongoQuery(Shop.findById(id)),
     create: async (userData) => handleMongoQuery(Shop.create(userData)),
