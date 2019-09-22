@@ -36,33 +36,33 @@ This will up mongo db and the application
 ## Routes
 
   ### Shops
-  - GET    localhost:7003/shops     
-  - GET    localhost:7003/shop/:id
-  - PUT    localhost:7003/shop/:id
-  - POST   localhost:7003/shop
-  - DELETE localhost:7003/shops
+  - `GET    localhost:7003/shops`
+  - `GET    localhost:7003/shop/:id`
+  - `PUT    localhost:7003/shop/:id`
+  - `POST   localhost:7003/shop`
+  - `DELETE localhost:7003/shops`
 
   ### Products
-  - GET    localhost:7003/products 
-  - GET    localhost:7003/product/:id
-  - PUT    localhost:7003/product/:id
-  - POST   localhost:7003/product
-  - DELETE localhost:7003/producs
+  - `GET    localhost:7003/products`
+  - `GET    localhost:7003/product/:id`
+  - `PUT    localhost:7003/product/:id`
+  - `POST   localhost:7003/product`
+  - `DELETE localhost:7003/producs`
 
   ### Campaings
-  - GET    localhost:7003/Campaings 
-  - GET    localhost:7003/Campaing/:id
-  - PUT    localhost:7003/Campaings/:id
-  - POST   localhost:7003/Campaing
-  - DELETE localhost:7003/Campaings
+  - `GET    localhost:7003/campaings`
+  - `GET    localhost:7003/campaing/:id`
+  - `PUT    localhost:7003/campaings/:id`
+  - `POST   localhost:7003/campaing`
+  - `DELETE localhost:7003/campaing`
 
   ### Short/Expand Urls
-  - GET   localhost:7003/urls
-  - POST  localhost:7003/url/shorten
-  - GET   localhost:7003/url/expand/:url
+  - `GET   localhost:7003/urls`
+  - `POST  localhost:7003/url/shorten`
+  - `GET   localhost:7003/url/expand/:url`
 
   ### Tracking clicks 
-  - GET  localhost:7003/url/:url
+  - `GET  localhost:7003/url/:url`
 
 ### Author 
 **Anderson <andersons.code@gmail.com>**
