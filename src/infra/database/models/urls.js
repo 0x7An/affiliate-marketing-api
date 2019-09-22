@@ -1,3 +1,10 @@
+/**
+ * Url Schema
+ * This file describes the Url Model
+ * 
+ * @module UrlSchema
+ */
+
 import mongoose from 'mongoose';
 
 const UrlSchema = new mongoose.Schema({

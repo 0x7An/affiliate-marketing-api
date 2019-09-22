@@ -1,3 +1,10 @@
+/**
+ * Campaing repository.
+ * This module handle all requests with the Camping Collection in mongo databases.
+ * 
+ * @module campaignRepository
+ */
+
 import mongoose from 'mongoose'
 import { logger } from '../../infra/logger'
 const Campaign = mongoose.model('Campaign')

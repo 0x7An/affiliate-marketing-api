@@ -1,3 +1,10 @@
+/**
+ * Application file
+ * This is the application file, where we return an koajs server with middlewares.
+ * 
+ * @module Application
+ */
+
 import * as http from 'http'
 import Koa from 'koa'
 import cors from '@koa/cors'
@@ -10,6 +17,7 @@ import { errorHandler } from './middlewares/error-handler'
 import mongoose from '../infra/database/mongoose'
 
 import router from './routes'
+
 /**
  * Creates and returns a new Koa application.
  *

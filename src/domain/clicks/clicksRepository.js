@@ -1,3 +1,10 @@
+/**
+ * Clicks repository.
+ * This module handle all requests with the Clicks Collection in mongo databases.
+ * 
+ * @module clicksRepository
+ */
+
 import mongoose from 'mongoose'
 import { logger } from '../../infra/logger'
 const Click = mongoose.model('Click')

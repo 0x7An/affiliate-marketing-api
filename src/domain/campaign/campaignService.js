@@ -1,3 +1,10 @@
+/**
+ * Campaing service.
+ * This file handles all the business logic of campaings.
+ * 
+ * @module CampaignService
+ */
+
 import { campaignRepository } from './campaignRepository'
 import { Service } from '../core/service'
 

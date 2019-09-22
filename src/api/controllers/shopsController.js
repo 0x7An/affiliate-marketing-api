@@ -1,3 +1,10 @@
+/**
+ * Shops controller.
+ * This file provides all the methods exported in routes file.
+ * All methods uses the shop service api to handle business logic, and returns a http response.
+ * @module Shops controller.
+ */
+
 'use strict'
 import { shopService } from '../../domain/shop/shopService'
 

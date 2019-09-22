@@ -1,6 +1,14 @@
+/**
+ * mongoose file.
+ * This file connects and load all models to a mongo database.
+ * 
+ * @module mongoose
+ */
+
 import mongoose from 'mongoose'
 import { logger } from '../logger'
 import { env } from '../env'
+
 import { ProductsModel } from './models/product'
 import { UrlsModel } from './models/urls'
 import { ClicksModel } from './models/clicks'

@@ -1,3 +1,10 @@
+/**
+ * Index file
+ * This is the main file, where all starts.
+ * It runs an http server with the configurations loaded in the env.yaml file
+ * @module Index
+ */
+
 import { createServer } from './src/api/application'
 import { logger } from './src/infra/logger'
 import { env } from './src/infra/env'

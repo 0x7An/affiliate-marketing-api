@@ -1,3 +1,10 @@
+/**
+ * Shops repository.
+ * This module handle all requests with the Shops Collection in mongo databases.
+ * 
+ * @module shopsRepository
+ */
+
 import mongoose from 'mongoose'
 import { logger } from '../../infra/logger'
 const Shop = mongoose.model('Shop')

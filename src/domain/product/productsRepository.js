@@ -1,3 +1,10 @@
+/**
+ * Products repository.
+ * This module handle all requests with the Products Collection in mongo databases.
+ * 
+ * @module productsRepository
+ */
+
 import mongoose from 'mongoose'
 import { logger } from '../../infra/logger'
 const Product = mongoose.model('Product')

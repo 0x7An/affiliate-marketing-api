@@ -1,3 +1,10 @@
+/**
+ * Urls service.
+ * This file handles all the business logic of urls.
+ * 
+ * @module UrlsService
+ */
+
 import { urlsRepository } from './urlsRepository'
 import { clicksRepository } from '../clicks/clicksRepository'
 import { Service } from '../core/service'

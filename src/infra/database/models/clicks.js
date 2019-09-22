@@ -1,3 +1,10 @@
+/**
+ * Click Schema
+ * This file describes the Click Model
+ * 
+ * @module ClickSchema
+ */
+
 import mongoose from 'mongoose';
 
 const ClickSchema = new mongoose.Schema({

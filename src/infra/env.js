@@ -1,3 +1,10 @@
+/**
+ * Env file
+ * This file loads all the configuration with the yenv package, on the env.yaml file
+ * 
+ * @module env
+ */
+
 import yenv from 'yenv'
 import { logger } from './logger'
 

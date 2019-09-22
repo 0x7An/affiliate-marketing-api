@@ -1,3 +1,10 @@
+/**
+ * logger file
+ * This file create a instance of Bristol package, who are used all over the application.
+ * 
+ * @module logger
+ */
+
 import { env } from './env'
 import { Bristol } from 'bristol'
 import palin from 'palin'

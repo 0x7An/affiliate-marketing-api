@@ -1,3 +1,10 @@
+/**
+ * Campaign Schema
+ * This file describes the Campaing Model
+ * 
+ * @module CampaignSchema
+ */
+
 import mongoose from 'mongoose';
 
 const CampaignSchema = new mongoose.Schema({

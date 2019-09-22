@@ -1,3 +1,10 @@
+/**
+ * Product Schema
+ * This file describes the Product Model
+ * 
+ * @module ProductSchema
+ */
+
 import mongoose from 'mongoose';
 
 const ProductSchema = new mongoose.Schema({

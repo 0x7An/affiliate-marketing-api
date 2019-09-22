@@ -1,3 +1,10 @@
+/**
+ * Shop service.
+ * This file handles all the business logic of shops.
+ * 
+ * @module ShopService
+ */
+
 import { shopRepository } from './shopRepository'
 import { Service } from '../core/service'
 

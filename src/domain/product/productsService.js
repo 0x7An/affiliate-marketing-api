@@ -1,3 +1,10 @@
+/**
+ * Products service.
+ * This file handles all the business logic of products.
+ * 
+ * @module ProductService
+ */
+
 import { productsRepository } from './productsRepository'
 import { Service } from '../core/service'
 

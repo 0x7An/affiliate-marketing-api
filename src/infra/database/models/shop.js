@@ -1,3 +1,10 @@
+/**
+ * Shop Schema
+ * This file describes the Shop Model
+ * 
+ * @module Shopchema
+ */
+
 import mongoose from 'mongoose';
 
 const ShopSchema = new mongoose.Schema({

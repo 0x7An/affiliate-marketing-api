@@ -1,3 +1,10 @@
+/**
+ * Error-handler middlware file
+ * This middleware is reponsible to take action in any failed request in our server.
+ * 
+ * @module errorHandler
+ */
+
 import { logger } from '../../infra/logger'
 import { env } from '../../infra/env'
 

@@ -1,3 +1,10 @@
+/**
+ * Urls repository.
+ * This module handle all requests with the Urls Collection in mongo databases.
+ * 
+ * @module urlsRepository
+ */
+
 import mongoose from 'mongoose'
 import { logger } from '../../infra/logger'
 import { click } from '../../api/controllers/urlsController';
