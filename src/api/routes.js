@@ -4,6 +4,7 @@ import Router from 'koa-router';
 import { index, create, find, update, destroy } from './controllers/productsController';
 import { allUrls, shorten, expand, click } from './controllers/urlsController';
 import { AllCampaings, createCampaing, findCampaing, updateCampaing, destroyCampaing } from './controllers/campaignController';
+import { AllShops, createShop, findShop, updateShop, destroyShop } from './controllers/shopsController';
 
 const router = new Router();
 
@@ -33,5 +34,11 @@ router.get('/campaign/:id', findCampaing);
 router.put('/campaign/:id', updateCampaing);
 router.post('/campaign', createCampaing);
 router.delete('/campaign', destroyCampaing);
+
+router.get('/shops', AllShops);
+router.get('/shop/:id', findShop);
+router.put('/shop/:id', updateShop);
+router.post('/shop', createShop);
+router.delete('/shop', destroyShop);
 
 export default router
