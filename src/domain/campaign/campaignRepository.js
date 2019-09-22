@@ -12,7 +12,7 @@ const handleMongoQuery = async (queryCallback) => {
   }
 }
 
-export const campaignsRepository = {
+export const campaignRepository = {
     getAll : async () => handleMongoQuery(Campaign.find({})),
     getById : async (id) => handleMongoQuery(Campaign.findById(id)),
     create: async (userData) => handleMongoQuery(Campaign.create(userData)),

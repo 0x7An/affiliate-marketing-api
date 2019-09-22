@@ -56,4 +56,4 @@ const _getFieldsToUpdate = (fields) => {
     }
 }
 
-export const CampaignsService = new CampaignService();
+export const campaignService = new CampaignService();
