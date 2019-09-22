@@ -2,6 +2,7 @@ import { urlsRepository } from './urlsRepository'
 import { clicksRepository } from '../clicks/clicksRepository'
 import { Service } from '../core/service'
 import nanoid from 'nanoid'
+var geoip = require('geoip-lite');
 
 class UrlsService extends Service {
   constructor() {
@@ -22,8 +23,7 @@ class UrlsService extends Service {
 
     let data = {
        original_url: url,
-       shortned_url: nanoid(7),
-       clicks: 0,
+       shortned_url: await this.generateShortUrl(),
        user_id: user_id
     }
 
@@ -42,11 +42,25 @@ class UrlsService extends Service {
   async click(url, metadata) {
     let result = {}
     metadata.clickTime = new Date().toISOString()
+
+    console.log(metadata)
+    //console.log(geoip.lookup(metadata))
+
     result.data = await this.urlsRepository.getByUrl(url)
     await this.clicksRepository.create({ url, metadata })
     result.status = result.data ? 200 : 500
     return result
   }
+
+  async generateShortUrl() {
+    let shortUrl = nanoid(7)
+    let urlAlreadyExists = await this.urlsRepository.getByUrl(shortUrl)
+    if (urlAlreadyExists) {
+      this.generateShortUrl()
+    }
+    return shortUrl
+  }
+
 }
 
 export const urlsService = new UrlsService();
