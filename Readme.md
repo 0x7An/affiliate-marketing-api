@@ -22,9 +22,9 @@
   This structure provides some design patterns to be easily modified when needed.
 
 ## Pre-Requisites
-- node >=11.8.0
-- docker 
-- docker-compose
+- `node >=11.8.0`
+- `docker`
+- `docker-compose`
 
 ## Usage
 
