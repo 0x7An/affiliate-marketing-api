@@ -1,13 +1,27 @@
-<h1 align="center">Welcome to Affiliate Marketing API 👋</h1>
+<h1 >Affiliate Marketing API</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D11.8.0-blue.svg" />
 </p>
 
-> Affiliate Marketing API
+## Description
+  This project aims to manage affiliate marketing links.\
+  You can register a new shop, create a campaing to products with a personalized discount.\
+  Influencers will navigate trough a list of products, and generate a unique link.\
+  When this link is clicked we track some info, and redirect to the shop page.
 
-## Prerequisites
+## Project Archteture
+  This project is composed by multilayer folder structure, inspired by DDD and Clean Archteture.
+  - The application layer on ./src/api\
+    This layer is responsible to mediate between the rest api and your business domain.
+  - The Domain layer on ./src/domain\
+    This layer is reponsible to all the business rules, and interfacing with DB trough a repository pattern.
+  - The Infra Layer on ./src/infra\
+    This layer contains configurations for the application and the database.
 
+  This structure provides some design patterns to be easily modified when needed.
+
+## Pre-Requisites
 - node >=11.8.0
 - docker 
 - docker-compose
@@ -19,25 +33,38 @@ docker-compose up
 ```
 This will up mongo db and the application
 
-# Routes
+## Routes
 
-## urls
-GET   /urls - retrive all urls that has been shortned\
-POST  /url/shorten - short any url as a post verb, need to pass a user_id\
-GET   /url/expand/:url - expand any shortned url\
+  ### Shops
+  - GET    localhost:7003/shops     
+  - GET    localhost:7003/shop/:id
+  - PUT    localhost:7003/shop/:id
+  - POST   localhost:7003/shop
+  - DELETE localhost:7003/shops
 
-## clicks
-GET  /url/:url - contabilize clicks\
+  ### Products
+  - GET    localhost:7003/products 
+  - GET    localhost:7003/product/:id
+  - PUT    localhost:7003/product/:id
+  - POST   localhost:7003/product
+  - DELETE localhost:7003/producs
 
-## products
-GET /products - retrieve all products\
-GET /product/:id' - get a product by id\
-PUT /product/:id\
-POST /product\
-DELETE /product\
+  ### Campaings
+  - GET    localhost:7003/Campaings 
+  - GET    localhost:7003/Campaing/:id
+  - PUT    localhost:7003/Campaings/:id
+  - POST   localhost:7003/Campaing
+  - DELETE localhost:7003/Campaings
 
-## Author
+  ### Short/Expand Urls
+  - GET   localhost:7003/urls
+  - POST  localhost:7003/url/shorten
+  - GET   localhost:7003/url/expand/:url
 
-👤 **Anderson <andersons.code@gmail.com>**
+  ### Tracking clicks 
+  - GET  localhost:7003/url/:url
+
+### Author 
+**Anderson <andersons.code@gmail.com>**
 
 * Github: [@andersondsl](https://github.com/andersondsl)
