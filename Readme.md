@@ -12,6 +12,9 @@
 
 ## Project Archteture
   This project is composed by multilayer folder structure, inspired by DDD and Clean Archteture.
+
+    `Each domain of business has an controller, service, repository and model.`
+
   - The application layer on ./src/api\
     This layer is responsible to mediate between the rest api and your business domain.
   - The Domain layer on ./src/domain\
